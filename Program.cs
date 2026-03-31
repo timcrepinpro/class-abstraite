@@ -13,6 +13,23 @@ class Program
             new Ordinateur("c1castj", "bonjour", new DateTime(2007, 11, 14),32)
             
         };
+
+
+        Ordinateur o1 = new Ordinateur("c1castj", "bonjour", new DateTime(2007, 11, 14),32);
+        Ordinateur o2 = new Ordinateur("c1castj", "bonjour", new DateTime(2007, 11, 14),32);
+        Smartphone s1 = new Smartphone("c1castj", "bonjour", new DateTime(2007, 11, 14),32);
+
+
+        HashSet<Appareil> panier = new HashSet<Appareil>();
+        panier.Add(o1);
+        panier.Add(o2);
+        panier.Add(s1);
+        Console.WriteLine(panier.Count);
+        
+
+
+
+
         foreach (object Appareil in appareils)
             {
                 if (Appareil is Ordinateur)
@@ -36,6 +53,26 @@ class Program
                 
             }
 
+        foreach (object paire in panier)
+        {
+            if ( paire is Ordinateur)
+            {
+                    Ordinateur Ordinateur = (Ordinateur)paire;
+                    Ordinateur.AfficherType();
+                    Ordinateur.AfficherInfos();
+                    Ordinateur.CalculerAnciennete();
+                    Console.WriteLine(Ordinateur.ToString());
+            }
+            if ( paire is Smartphone)
+            {
+                    Smartphone Smartphone = (Smartphone)paire;
+                    Smartphone.AfficherType();
+                    Smartphone.AfficherInfos();
+                    Smartphone.CalculerAnciennete();
+                    Console.WriteLine(Smartphone.ToString());
+            }
+        }
+
     }
 }
 
@@ -58,6 +95,10 @@ q1 to string serv a afficher les info de maniere brut pour les developeur
 
 ex4
 les donnes sont sous le type datetime
+
+ex5
+car se sont les class fille de Appareil
+
 
 
 
