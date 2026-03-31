@@ -7,7 +7,8 @@ class Program
         Console.WriteLine("Hello, World!");
 
         List<Appareil> appareils = new List<Appareil> { 
-            new Ordinateur("c1castj", "bonjour", DateTime.Now,32)
+            new Ordinateur("c1castj", "bonjour", DateTime.Now,32),
+            new Smartphone("c1castj", "bonjour", DateTime.Now,32)
             
         };
         foreach (object Appareil in appareils)
@@ -19,8 +20,16 @@ class Program
                     Ordinateur.AfficherInfos();
                     Ordinateur.CalculerAnciennete();
                     Console.WriteLine(Ordinateur.ToString());
+                    
 
-
+                }
+                else if (Appareil is Smartphone)
+                {
+                    Smartphone Smartphone = (Smartphone)Appareil;
+                    Smartphone.AfficherType();
+                    Smartphone.AfficherInfos();
+                    Smartphone.CalculerAnciennete();
+                    Console.WriteLine(Smartphone.ToString());
                 }
                 
             }
@@ -43,5 +52,9 @@ virtual peut etre apeller dans la class mere pas abstact car virtual peut etre r
 
 ex2
 q1 to string serv a afficher les info de maniere brut pour les developeur
+
+
+ex3
+
 
 */
