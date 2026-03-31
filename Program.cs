@@ -99,8 +99,10 @@ les donnes sont sous le type datetime
 ex5
 car se sont les class fille de Appareil
 
+ex6
+il serv a pouvoir ajouter les instance a tout moment
 
-
-
+ex7 
+le try catch dans cetet fonction est utile car la chance quil y ai une errreur du fait quelle communique avec un utilisateur
 
 */
