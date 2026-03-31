@@ -8,7 +8,9 @@ class Program
 
         List<Appareil> appareils = new List<Appareil> { 
             new Ordinateur("c1castj", "bonjour", DateTime.Now,32),
-            new Smartphone("c1castj", "bonjour", DateTime.Now,32)
+            new Smartphone("c1castj", "bonjour", DateTime.Now,32),
+            new Smartphone("c1castj", "bonjour", new DateTime(2007, 11, 14),32),
+            new Ordinateur("c1castj", "bonjour", new DateTime(2007, 11, 14),32)
             
         };
         foreach (object Appareil in appareils)
@@ -54,7 +56,10 @@ ex2
 q1 to string serv a afficher les info de maniere brut pour les developeur
 
 
-ex3
+ex4
+les donnes sont sous le type datetime
+
+
 
 
 */
